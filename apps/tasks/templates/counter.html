@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        button {
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 8px;
+        }
+        
+        .count {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="{% url 'welcome' %}">&larr; Back</a>
+    <div class="card">
+        <h2>Counter</h2>
+        <div class="count">{{ counter }}</div>
+
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="inc">
+            <button type="submit">Increase</button>
+        </form>
+
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="reset">
+            <button type="submit">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>

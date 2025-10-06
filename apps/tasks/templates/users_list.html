@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            background: #f7fafc;
+        }
+        
+        .grid {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: white;
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Users</h1>
+    <a href="{% url 'welcome' %}">&larr; Back</a>
+    <div class="grid">
+        {% for u in users %}
+        <div class="card">
+            <h3>{{ u.full_name }}</h3>
+            <p>Age: {{ u.age }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
