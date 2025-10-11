@@ -29,6 +29,8 @@ INSTALLED_APPS = [
 
 PROJECT_APPS = [
     'apps.tasks',
+    'apps.catalogs',
+    'apps.commerces',
     ]
 
 '''------------------- MIDDLEWARE | TEMPLATES | VALIDATORS ------------------'''
