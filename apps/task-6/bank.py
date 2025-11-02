@@ -9,7 +9,7 @@ class Bank:
 #Changed
     def add_account(self, account):
         self.accounts.append(account)
-        print(f"Account {account.account_number} added. 'Changed place'")
+        print(f"Account {account.account_number} added.'changing'")
 
     def find_account(self, account_number):
         for acc in self.accounts:
