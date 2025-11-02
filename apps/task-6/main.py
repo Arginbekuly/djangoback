@@ -13,7 +13,7 @@ def display_menu():
     print("6. Exit")
 
 def main():
-    bank = Bank("ChatGPT Bank")
+    bank = Bank("AI Bank")
 
     while True:
         display_menu()

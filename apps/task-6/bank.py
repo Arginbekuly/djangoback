@@ -6,10 +6,10 @@ class Bank:
     def __init__(self, name):
         self.name = name
         self.accounts = []
-
+#Changed
     def add_account(self, account):
         self.accounts.append(account)
-        print(f"Account {account.account_number} added.")
+        print(f"Account {account.account_number} added. 'Changed place'")
 
     def find_account(self, account_number):
         for acc in self.accounts:

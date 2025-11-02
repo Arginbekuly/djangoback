@@ -13,12 +13,13 @@ class Account:
         else:
             print("Deposit amount must be positive.")
 
+#changed
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
             print(f"{amount} withdrawn. New balance: {self.balance}")
         else:
-            print("Invalid withdrawal amount.")
+            print("Withdrawal failed!")
 
     def get_details(self):
         return f"Account: {self.account_number}, Owner: {self.owner}, Balance: {self.balance}"
