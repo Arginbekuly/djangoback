@@ -13,25 +13,33 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_URLCONF = 'settings.urls'
 ASGI_APPLICATION = 'settings.asgi.application'
 WSGI_APPLICATION = 'settings.wsgi.application'
+AUTH_USER_MODEL = "auths.CustomUser"
 
 
 '''----------------------------APPS-------------------------'''
 
-INSTALLED_APPS = [
+DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.tasks'
+    'rest_framework',
+    'rest_framework_simplejwt',
+
 ]
 
 PROJECT_APPS = [
     'apps.tasks',
     'apps.catalogs',
     'apps.commerces',
+    'apps.abstracts',
+    'apps.auths',
+    'apps.courses'
     ]
+
+INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 
 '''------------------- MIDDLEWARE | TEMPLATES | VALIDATORS ------------------'''
 
